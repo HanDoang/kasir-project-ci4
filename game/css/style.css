@@ -1,0 +1,62 @@
+h1 , h2{
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+    margin: 10px;
+    color: rgb(188, 202, 3);
+
+}
+body{
+    
+    background: linear-gradient(#2976a5, #2dc446);  
+}
+
+button{
+    display: block;
+    margin: auto
+}
+
+.container{
+    width: 600px;
+    margin: auto;
+    cursor: url(../img/hamer1.png), auto;
+}
+
+.container:active {
+    cursor: url(../img/hamer2.png), auto;
+}
+
+.tanah{
+    width:200px;
+    height:200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.tanah::after{
+    content:'';
+    display: block;
+    width:200px;
+    height: 100px;
+    background: url(../img/tanah-removebg-preview.png) bottom center no-repeat;
+    background-size: 80%;
+    position:absolute;
+    bottom: -25px;
+}
+
+.tikus{
+    width:100%;
+    height: 100%;
+    background: url(../img/tikus-removebg-preview.png) bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100px;  
+    transition: top 0.5s;
+
+}
+
+.tanah.muncul .tikus{
+    top:0;
+
+}
